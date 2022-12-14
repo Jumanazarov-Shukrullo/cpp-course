@@ -1,0 +1,17 @@
+1. To'g'ri burchakli uchburchakning katetlari berilgan a, b
+Uning gipotenuzasini toping?
+
+2. Tekislikda 2 nuqta berilgan (x1, y1), (x2, y2)
+Ular orasidagi masofa topilsin.
+
+3. a,b,c sonlari berilgan, a ni b ga, b ni c ga, c ni a qiymatlarini almashtiring
+
+4. a * x^2 + b * x - c = 0, a != 0
+bo'lmasa uning ildizlarini toping
+D = b^2 - 4ac
+x1, x2 = (-b +- sqrt(D)) / 2 * a
+
+5. a soni berilgan uni 32 bit ko'rinishida ekranga chiqaring
+
+(x << y) is equivalent to multiplying x with 2^y (2 raised to power y).
+(x >> y) is equivalent to dividing x to 2^y (2 raised to power y).

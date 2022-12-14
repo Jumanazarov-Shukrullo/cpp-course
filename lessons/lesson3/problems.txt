@@ -1,0 +1,144 @@
+1.Kafedagi pirog A so'm va B tiyin turadi. N pirog uchun qancha so'm va tiyin to'lash kerakligini aniqlang.
+
+Birinchi 3 ta son kiritamiz, A pirog necha so'm va B necha tiyin, N esa nechta pirog olishimiz
+
+
+Misol uchun
+10 15
+2
+20 30   =>> ya'ni 2 ta pirogimiz 2*10 -> 20 so'm 2*15 - 30 tiyin
+
+2 50
+4  
+10 0 ==>> bunda 4 pirogimiz ja'mi 10 so'm va 0 tiyin bo'ladi, chunki 100tiyin = 1so'm ga teng
+
+
+2.Elektron soat vaqtni h:mm:ss formatida ko'rsatadi (0:00:00 dan 23:59:59 gacha), 
+ya'ni avval soatlar soni yoziladi, keyin ikki xonali daqiqalar soni majburiy, 
+keyin ikki xonali soniyalar soni majburiydir. Agar kerak bo'lsa, daqiqalar va soniyalar soni nol bilan ikki xonali raqamga to'ldiriladi.
+
+Kun boshidan N soniya o'tdi. Soat nimani ko'rsatayotganini chiqaring.
+
+Misol uchun
+3206 sekund - buning natijasi ==> 1:00:02
+10 -> 0:00:10
+
+988 -> 0:16:28
+
+3599 -> 0:59:59
+
+4991 -> 1:23:11
+
+86399  ->  23:59:59
+86400  ->  0:00:00
+86401  ->  0:00:01
+
+10000 -> 2:46:40
+
+378304 -> 9:05:04
+
+280800 -> 6:00:00
+
+3.Toshkent halqa yo'lining uzunligi 109 kilometrni tashkil qiladi. 
+Velosipedchi Akmal Toshkent halqa yo'lining 0 kilometridan boshlanadi va soatiga V kilometr tezlikda harakatlanadi. 
+T soatdan keyin qayerda to'xtaydi?
+
+
+2 ta son kiritiladi v -> tezlik t - soat 
+
+Misol uchun
+
+60
+2
+
+11 --> 120 km yuradi lekin 109km dan iborat bo'lgani uchun u 109km ni 11 km da bo'ladi
+
+
+-1
+1
+
+108 --> -1 ya'ni orqaga harakat qil bunda albatta 109-km ni 108-da bo'ladi
+
+
+4. To'rt xonali raqam berilgan. Uning o'nli yozuvi simmetrik yoki yo'qligini aniqlang. 
+Agar raqam simmetrik bo'lsa, 1 ni, aks holda boshqa butun sonni chop eting. 
+Raqam to'rttadan kam raqamga ega bo'lishi mumkin, keyin siz uning o'nlik belgisi chap tomonda 
+ahamiyatsiz nollar bilan to'ldirilganligini hisobga olishingiz kerak.
+
+
+Misol uchun: 
+
+2002 
+1 chunki 20 ==  20
+
+2008
+3  chunki 80 != 20
+
+2112
+1 chunki 21 == 21
+
+5. shaxmat shohi gorizontal, vertikal va diagonal bo'ylab harakat qiladi, lekin faqat 1 kvadrat. 
+Shaxmat taxtasidagi ikkita turli kataklarni hisobga olgan holda, qirol bir harakatda birinchi katakdan ikkinchisiga o'tishi mumkinligini aniqlang.
+
+
+biz 4 ta son kiritamiz, ya'ni x1 y1 birinchi pozitsiya x2 y2 ikkinchi pozitsiya
+
+4
+4
+5
+5
+
+Javobi: "Xa" chunki shox diagonal yurish qila oladi
+
+4
+4
+5
+8
+
+Javobi: "No" vertikal, gorizontal yoki diagonal yurish qila olmaydi
+
+
+6. Shaxmat fili diagonal bo'ylab harakatlanadi. Shaxmat taxtasida ikkita turli katak berilgan bo'lsa, 
+fil bir harakatda birinchi katakdan ikkinchisiga o'tishi mumkinligini aniqlang.
+
+
+Misol uchun
+
+4
+4
+5
+5
+
+Javob: "Xa"
+
+4
+4
+5
+6
+
+Javob: "Yo'q"
+
+
+7. Shaxmat oti "G" harfida harakat qiladi - har qanday yo'nalishda vertikal ravishda ikkita kvadrat va gorizontal ravishda bitta kvadrat yoki aksincha.
+ Shaxmat taxtasining ikki xil kataklari berilgan bo‘lsa, ritsar bir harakatda birinchi katakdan ikkinchisiga o‘ta oladimi yoki yo‘qligini aniqlang.
+ 
+ 
+ misol
+ 1
+ 1
+ 1
+ 4
+ 
+ javob: 'yo'q'
+ 
+ 1
+ 1
+ 8
+ 8
+ javob: 'yo'q'
+ 
+ 3
+ 6
+ 2
+ 4
+ javob: 'ha'

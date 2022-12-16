@@ -1,7 +1,6 @@
-void first_problem() {
 #include <iostream>
 
-    int main() {
+void first_problem() {
         int i = 0;
         int j = 1;
         int n;
@@ -20,6 +19,7 @@ void first_problem() {
             n--;
         }
         std::cout << fib;
-        return 0;
-    }
+}
+int main() {
+    first_problem();
 }

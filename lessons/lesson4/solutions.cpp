@@ -1,6 +1,6 @@
 #include <iostream>
 
-int fib(int &n) {
+int fib(int n) {
     int i = 0;
     int j = 1;
     int fib = 1;
@@ -91,5 +91,10 @@ int sixth_problem(const int* arr, const int& n) {
 }
 
 int main() {
+    int b = 1;
+    const int& a = 1;
+    std::cout << &b << std::endl;
+    std::cout << &a << std::endl;
 
+    fib(11);
 }

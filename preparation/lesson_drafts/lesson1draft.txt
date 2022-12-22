@@ -1,0 +1,66 @@
+procedural - protsessual
+Procedural programming is a programming paradigm built around the idea that programs are 
+sequences of instructions to be executed. They focus heavily on splitting up programs 
+into named sets of instructions called procedures, analogous to functions.
+
+
+generic - umumiy
+Generics in C++
+Generics is the idea to allow type (Integer, String, … etc and user-defined types) to be a parameter to 
+methods, classes and interfaces. For example, classes like an array, map, etc, which can be used using generics very efficiently. 
+We can use them for any type.
+
+
+modular - modulli
+What does modular mean in C ++?
+Modular programming is the process of subdividing a computer program into separate sub-programs. 
+A module is a separate software component. It can often be used in a variety of applications and functions with other components of the system.07-Sept-2018
+
+
+What are the modules in C?
+What modules are. Modularization is a method to organize large programs in smaller parts, i.e. the modules.
+Module interface.
+Header file: Constant declarations.
+Header file: Type declarations.
+Header file: Global variables.
+Header file: Function prototypes. (void Sum( int a, int b ); void Sum(int, int);)
+Module implementation.
+Main program.
+
+
+The IEEE Standard for Floating-Point Arithmetic is the common convention for 
+representing numbers in binary on computers. In double-precision format, each number takes up 64 bits. 
+Single-precision format uses 32 bits, while half-precision is just 16 bits.
+
+
+What is int32_t C++?
+That's where int32_t comes in: it's an alias for whatever integer type your particular system has that is exactly 32 bits. 
+Template: intN_t or uintN_t Where N is width of integer which can be 8, 16, 32, 64 or any other type width supported by the library. CPP
+
+
+Should I use int or int32_t?
+Originally Answered: Is using of int32_t prefered to int in modern C/C++ programming? If you need a signed integer with exactly 32 bits, then yes. Otherwise, no. int should be your go-to type for signed integers, and you can count on it having at least 16 bits .
+
+
+character output (std::cout)
+The "c" in cout refers to "character" and "out" means "output". Hence cout means "character output". The cout object is used along with the insertion operator << in order to display a stream of characters.
+
+
+int x = 5.7;
+std::cout << x;
+
+
+bool y = 1000;
+
+
+'a' + 'b' // the result is not equal to 'ab' but 96 + 97
+
+5 / 3 not a double but int
+
+5./3 will be double
+
+
+long long z = 1000000000ll
+
+fixed with integer types - https://en.cppreference.com/w/cpp/types/integer
+

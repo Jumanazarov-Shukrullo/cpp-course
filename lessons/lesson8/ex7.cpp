@@ -2,11 +2,12 @@
 #include <string>
 
 int main() {
-	std::string str = "Hello";
-	std::cout << str << "\n";
-	str.replace(4, 2, "hi");
-	std::cout << str << "\n";
-	str.append("hiiiiiii");
-	std::cout << str << "\n";
+	char s;
+	std::cin>>s;
+	// std::cout << (int)'a';
+	if(s >= 'a' && s <= 'z')
+		std::cout << char(s - 32);
+	else
+		std::cout << s;
 	return 0;
 }

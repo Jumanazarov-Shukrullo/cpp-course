@@ -1,0 +1,6 @@
+string comparison
+string concatenation
+substr
+length
+replace
+append

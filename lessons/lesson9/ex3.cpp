@@ -23,25 +23,34 @@
 #include <array>
 #include <iostream>
 
-int main()
-{
-    std::vector<int> v1;
-    std::vector<std::vector<int>> v2;
-
-    std::vector<std::string> v;
-    std::cout << v.capacity() << std::endl;
-    for (size_t i = 0; i < 9; i++)
-    {
-        v.push_back("ab");
-        std::cout << v.size() << "\n";
+int main() {
+    std::vector<int> v1(6);
+    std::cout << v1.capacity() << std::endl;
+    for(const auto& i : v1) {
+        std::cout << i << " ";
     }
-    for (const auto &i : v)
-    {
-        std::cout << i << std::endl;
-    }
-    std::cout << v.capacity() << std::endl; 
-    std::cout << v.max_size() << "\n";
-
+//    for(int i = 0; i < 10; ++i) {
+//        if (i % 2 == 0) {
+//            v1.push_back(i);
+//        }
+//    }
+//    std::cout << v1.size() << std::endl;
+//    std::cout << v1.max_size() << std::endl;
+//    std::cout << "Elements before pop_back: ";
+//    for(const auto& i : v1) {
+//        std::cout << i << " ";
+//    }
+//    v1.pop_back();
+//    std::cout << std::endl << "Elements after pop_back: ";
+//    for(const auto& i : v1) {
+//        std::cout << i << " ";
+//    }
+//    std::cout << std::endl << "vector size after popping back: " <<
+//    v1.size();
+//    std::cout << std::endl << "Elements with at(): ";
+//    for(int i = 0; i < v1.size(); ++i) {
+//        std::cout << v1.at(i) << " ";
+//    }
     /// methods std::array ===> size(), max_size(), at(index), fill(n)
     /// methods std::vector ===> size(), at(index), push_back(val), pop_back(), resize()
 }

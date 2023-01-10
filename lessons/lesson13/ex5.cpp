@@ -35,7 +35,7 @@ public:
     ~String() {
         delete[] ptr_;
     }
-    /// Assignment operator
+    /// Copy assignment operator
     String& operator=(const String& other) {
         if (this == &other)
             return *this;

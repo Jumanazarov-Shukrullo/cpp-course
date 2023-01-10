@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <cassert>
 
 class String {
 public:
@@ -38,6 +39,14 @@ public:
         }
         return *this;
     }
+    String& operator+=(const String& other) {
+        size_t temp_size = size_;
+        size_ += other.size_;
+        for (int i = 0; i < other.size_; ++i) {
+            ptr_[i + temp_size] = other.ptr_[i];
+        }
+        return *this;
+    }
     void print() {
         for (int i = 0; i < size_; ++i) {
             std::cout << *(ptr_ + i);
@@ -48,14 +57,30 @@ public:
     char& operator[] (int index) {
         return ptr_[index];
     }
+    /// method for defining size
+    size_t size() const {
+        return size_;
+    }
 private:
     size_t size_;
     char* ptr_;
 };
+
+String operator+(const String& first, const String& second) {
+    return String(first) += second;
+}
+
 int main() {
     String str1(5, 'a');
+    String str2(4, 'b');
+    str1 += str2;
     str1.print();
-    str1[0] = 'b';
-    str1.print();
+    std::cout << str1[0] << std::endl;
+//    str1[0] = 'b';
+//    str1.print();
+    String hello(5, 'h');
+    String world(5, 'w');
+    String str3 = hello + world;
+    str3.print();
     return 0;
 }

@@ -52,10 +52,22 @@ private:
 };
 
 bool operator==(const BigUint &first, const BigUint &second) {
-    return false;
+    if (first.digits_.size() != second.digits_.size())
+        return false;
+    for (size_t i  = 0; i < first.digits_.size(); ++i) {
+        if (first.digits_[i] != second.digits_[i])
+            return false;
+    }
+    return true;
 }
 
 bool operator<(const BigUint &first, const BigUint &second) {
+    if (first.digits_.size() !=  second.digits_.size())
+        return first.digits_.size() < second.digits_.size();
+    for (size_t i = 0; i < first.digits_.size(); ++i) {
+        if (first.digits_[i] != second.digits_[i])
+            return first.digits_[i] < second.digits_[i];
+    }
     return false;
 }
 

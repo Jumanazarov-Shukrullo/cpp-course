@@ -1,43 +1,27 @@
-class class_c {
-public:
-    int max;
-    int min;
-    int middle;
+#include <vector>
+#include <map>
+#include <iostream>
 
-    class_c() {}
-    class_c(int my_max) {
-        max = my_max > 0 ? my_max : 10;
-    }
-    class_c(int my_max, int my_min) {
-        max = my_max > 0 ? my_max : 10;
-        min = my_min > 0 && my_min < max ? my_min : 1;
-    }
-    class_c(int my_max, int my_min, int my_middle) {
-        max = my_max > 0 ? my_max : 10;
-        min = my_min > 0 && my_min < max ? my_min : 1;
-        middle = my_middle < max && my_middle > min ? my_middle : 5;
-    }
-};
+using namespace std;
 
-
-class class_c {
-public:
-    int max;
-    int min;
-    int middle;
-
-    class_c(int my_max) {
-        max = my_max > 0 ? my_max : 10;
+int removeElement(vector<int>& nums, int val) {
+    int counter = 0;
+    for(int i = 0; i < nums.size(); ++ i) {
+        if (nums[i] != val) {
+            nums[counter] = nums[i];
+            ++counter;
+        } else {
+            nums.erase(nums.begin() + i);
+        }
     }
-    class_c(int my_max, int my_min) : class_c(my_max) {
-        min = my_min > 0 && my_min < max ? my_min : 1;
-    }
-    class_c(int my_max, int my_min, int my_middle) : class_c (my_max, my_min){
-        middle = my_middle < max && my_middle > min ? my_middle : 5;
-    }
-};
-int main() {
-
-    class_c c1{ 1, 3, 2 };
+    return counter;
 }
 
+int main() {
+    std::vector<int> v = {3, 1, 2, 3, 3};
+    removeElement(v, 3);
+    std::cout << std::endl;
+    for(const auto i : v) {
+        std::cout << i << " ";
+    }
+}

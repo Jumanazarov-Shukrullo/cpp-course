@@ -42,6 +42,7 @@ public:
     }
     BigUint& operator-=(const BigUint& other) {/**/}
     BigUint& operator*=(const BigUint& other) {/**/}
+
     BigUint& operator++ () {
         return operator+=(BigUint(1));
     }
@@ -74,25 +75,7 @@ bool operator<(const BigUint& first, const BigUint& second) {
     return false;
 }
 
-bool operator>(const BigUint& first, const BigUint& second) {
-    return (second < first);
-}
 
-bool operator>=(const BigUint& first, const BigUint& second) {
-    return !(first < second);
-}
-
-bool operator<=(const BigUint& first, const BigUint& second) {
-    return !(second < first);
-}
-
-bool operator==(const BigUint& first, const BigUint& second) {
-    return !(second < first) && !(first < second);
-}
-
-bool operator!=(const BigUint& first, const BigUint& second) {
-    return !(second == first);
-}
 
 std::istream& operator>>(std::istream& is, BigUint& num) {
     num.digits_.clear();
@@ -125,10 +108,14 @@ std::ostream& operator<<(std::ostream& os, const BigUint& num) {
     }
     return os;
 }
+
+
 int main() {
     BigUint a;
     BigUint b;
     std::cin >> a >> b;
-    bool xx = (a != b);
+//    std::cout << a++ << std::endl;
+    std::cout << a << " " << b << std::endl;
+    swap<BigUint>(a, b);
     std::cout << a << " " << b << std::endl;
 }

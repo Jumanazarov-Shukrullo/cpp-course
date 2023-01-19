@@ -78,24 +78,3 @@ std::set<T> intersection(const std::set<T>& a, const std::set<U>& b) {
 }
 
 
-template <typename T>
-void f(const T& el) {
-    std::cout << "el is not int " << el << std::endl;
-}
-
-template <>
-void f(const int& el) {
-    std::cout << "el is int " << el << std::endl;
-}
-
-template <typename T, typename U>
-void f(T x, U y) {
-
-}
-template <typename U>
-void f(int x, U y) {
-
-}
-
-template <>
-void f(int x, int y) {}

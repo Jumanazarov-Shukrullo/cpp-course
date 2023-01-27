@@ -41,7 +41,42 @@ public:
         return *this;
     }
     BigUint& operator-=(const BigUint& other) {/**/}
-    BigUint& operator*=(const BigUint& other) {/**/}
+    BigUint& operator*=(const BigUint& other)
+    {
+            const std::vector<uint8_t>& top = digits_;
+            const std::vector<uint8_t>& bot = other.digits_;
+
+            std::vector<uint8_t> mul(top.size()+bot.size(), 0);
+
+
+            for (int i = 0; i < top.size();i++){
+                for (int j = 0; j < bot.size();j++){
+                    mul[i + j] += (top[i] ) * (bot[j]);
+
+                }
+            }
+
+            for (int s, i = 0, t = 0; i < mul.size(); i++)
+            {
+                s = t + mul[i];
+                mul[i] = s % 10;
+                t = s / 10;
+//            std::cout << int(mul[i]) << " " ;
+            }
+
+            if(mul[mul.size()]==mul[mul.size()-1]){
+                std::vector<uint8_t> multi(mul.size()-1);
+                for(int i=0; i<mul.size()-1; ++i){
+                    multi[i] = mul[i];
+                }
+                digits_ = multi;
+                return *this;
+            }
+            else{
+                digits_ = mul;
+                return *this;
+            }///
+    }
 
     BigUint& operator++ () {
         return operator+=(BigUint(1));
@@ -114,8 +149,6 @@ int main() {
     BigUint a;
     BigUint b;
     std::cin >> a >> b;
-//    std::cout << a++ << std::endl;
-    std::cout << a << " " << b << std::endl;
-    swap<BigUint>(a, b);
-    std::cout << a << " " << b << std::endl;
+    a *= b;
+    std::cout <<a<< std::endl;
 }

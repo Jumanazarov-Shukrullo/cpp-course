@@ -1,0 +1,10 @@
+#ifndef CPP_COURSE_POLYMORPHISM_H
+#define CPP_COURSE_POLYMORPHISM_H
+
+
+class Polymorphism {
+
+};
+
+
+#endif //CPP_COURSE_POLYMORPHISM_H

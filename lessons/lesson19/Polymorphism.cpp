@@ -4,7 +4,8 @@
 
 /// this is Base class
 struct Base {
-    int a;
+    int a{};
+
     void f() {
         std::cout << "hello from base\n";
     }
@@ -12,7 +13,7 @@ struct Base {
 
 /// Derived class which is inheriting from base class
 struct Derived: Base {
-    int a;
+    int a{};
     void f() {
         std::cout << "hello from derived\n";
     }
@@ -130,10 +131,31 @@ int main(){
 
  */
 
+struct A {
+    A() {
+        std::cout << "A\n";
+    }
+    virtual ~A() {
+        std::cout << "~A\n";
+    }
+    virtual void some_method(){}
+};
+
+struct B : A {
+    B() {
+        std::cout << "B\n";
+    }
+    ~B() override {
+        std::cout << "~B\n";
+    }
+    void some_method() final {
+
+    }
+private:
+    //...//
+};
 int main() {
-    Base *b;
-    Derived d;
-    b = &d;
-    b->f();
+    A* b = new B;
+    delete b;
     return 0;
 }

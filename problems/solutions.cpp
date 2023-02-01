@@ -1,6 +1,6 @@
-#include "solutions.h"
+#include <iostream>
 
 int main() {
-	std::cout << tenth_problem(10);
+	std::cout << "hello world\n";
 	return 0;
 }

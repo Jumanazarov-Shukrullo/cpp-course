@@ -2,6 +2,7 @@
 #define CPP_COURSE_INHERITANCE_H
 
 
+
 #include <iostream>
 
 class TopString {

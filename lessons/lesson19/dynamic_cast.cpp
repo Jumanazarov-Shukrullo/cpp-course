@@ -13,26 +13,39 @@
 using namespace std;
 
 
-struct Entity {
+struct Mother {
     virtual void print_name() {}
 };
 
-struct Player : Entity {
+struct Daughter : Mother {
 
 };
 
-struct Enemy: Entity {
+struct Son: Mother {
 
 };
 
 
 int main() {
-    Player* player = new Player();
-    Entity* actual_enemy = new Enemy();
+    Son* son = new Son();
+    Daughter* daughter1 = new Daughter();
 
-    Entity* actual_player = player;
+    Mother* daughter = dynamic_cast<Mother *>(daughter1);
 
-    Player* p2 = dynamic_cast<Player*>(actual_player);
-    Player* p3 = dynamic_cast<Player*>(actual_enemy);
+//    Son* p2 = dynamic_cast<Son*>(mother);
+    if (daughter == nullptr) {
+        std::cout << "cast isn't happened\n";
+    } else {
+        std::cout << "cast is happened\n";
+    }
+
+    Son* p3 = dynamic_cast<Son*>(daughter1);
+    if (p3 == nullptr) {
+        std::cout << "cast isn't happened\n";
+    } else {
+        std::cout << "cast is happened\n";
+    }
+    /// static_cast, const_cast, reinterpret_cast
+    /// bitset_cast
     return 0;
 }

@@ -33,7 +33,7 @@ void do_hire(Database &db) {
     std::cout << "Enter last name: ";
     std::cin >> last_name;
 
-    auto& employee{ db.add_employee(first_name, last_name) };
+    auto &employee{db.add_employee(first_name, last_name)};
     std::cout << "Hired employee: " << employee.get_first_name() << " " <<
               employee.get_last_name() << " with employee number: " << employee.get_employee_number() << "\n";
 }
@@ -61,7 +61,7 @@ void do_promote(Database &db) {
     std::cin >> raise_amount;
 
     try {
-        auto &em{ db.get_employee(employee_number) };
+        auto &em{db.get_employee(employee_number)};
         em.promote(raise_amount);
     } catch (std::logic_error &error) {
         std::cerr << "Unable to promote: " << error.what() << "\n";
@@ -103,8 +103,24 @@ void input_interface() {
     }
 }
 
+#include <fstream>
 
 int main() {
-    input_interface();
+    // input_interface();
+    std::ifstream file("a.txt", std::ios::in);
+    std::string temp;
+    std::string str;
+    std::cin >> str;
+    int counter = 0;
+    while (file >> temp) {
+        if (temp == str)
+            ++counter;
+    }
+    if (counter == 0) {
+        std::cout << "word not found...\n";
+        exit(0);
+    } else {
+        std::cout << "found: " << counter << " words\n";
+    }
     return 0;
 }

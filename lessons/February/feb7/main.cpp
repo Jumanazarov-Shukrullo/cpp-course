@@ -9,22 +9,15 @@
 
 void do_it() {
     std::ofstream out("a.txt"); /// create file
-    if (!out) {
-        std::cout << "File created successfully...\n";
-    }
     std::ifstream in("a.txt");
     out << "I am writing to ...\n";
-    std::cout << "Writing to file successfully completed...\n";
     out.close();
-
     /// open another file
-    std::cout << "opening second file to write...\n";
     out.open("b.txt");
     std::string ch;
     while (in >> ch) { /// reading file
         out << ch << " "; /// writing to file
     }
-    std::cout << "writing to the second file successfully completed...\n";
     in.close();
     out.close();
 }
@@ -82,21 +75,6 @@ void do_job() {
 }
 
 int main() {
-    std::ifstream file("file.txt");
-    int line_sum = 0;
-    int count_word = 0;
-    size_t count_char = 0;
-    std::string temp;
-    std::string line;
-    while (std::getline(file, line)) {++line_sum;}
-    file.clear();
-    file.seekg(std::ifstream::beg);
-    while (file >> temp) {
-        ++count_word;
-        count_char += temp.size();
-    }
-    std::cout << line_sum << std::endl;
-    std::cout << count_word << "\n" << count_char;
-    file.close();
+
     return 0;
 }
